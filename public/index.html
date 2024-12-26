@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANIAR E-Commerce</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="PANIAR Logo" id="logo">
+        <h1>Welcome to PANIAR E-Commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="viewCart()">View Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="products">
+            <div class="product" id="product1">
+                <img src="garden_sprayer.jpg" alt="Garden Sprayer Pressure Bottle">
+                <h2>Garden Sprayer Pressure Bottle</h2>
+                <p>Our Garden Sprayer Pressure Bottle is perfect for your gardening needs. This essential garden tool is
+                    designed for easy use, making it ideal for watering plants, applying fertilizers, pesticides, and
+                    more. It's a must-have for any garden enthusiast!</p>
+                <button onclick="addToCart(1)">Add to Cart</button>
+            </div>
+            <div class="product" id="product2">
+                <img src="" alt="Product 2">
+                <h2>Product 2</h2>
+                <p>Description of Product 2</p>
+                <button onclick="addToCart(2)">Add to Cart</button>
+            </div>
+            <div class="product" id="product3">
+                <img src="" alt="Product 3">
+                <h2>Product 3</h2>
+                <p>Description of Product 3</p>
+                <button onclick="addToCart(3)">Add to Cart</button>
+            </div>
+        </section>
+        <section id="cart" style="display:none;">
+            <h2>Your Cart</h2>
+            <ul id="cartItems"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 PANIAR E-Commerce. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
