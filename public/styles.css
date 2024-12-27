@@ -1,5 +1,14 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
+}
+
 header {
-    background-color: #3758a9; /* Background color for the header */
+    background-color: #000000; /* Black background for the header */
     padding: 0; /* Remove padding for the header */
     position: sticky; /* Make the header sticky */
     top: 0; /* Stick to the top */
@@ -8,14 +17,19 @@ header {
 }
 
 header.sticky {
-    background: linear-gradient(to bottom, rgba(55, 88, 169, 1), rgba(55, 88, 169, 0.8)); /* Gradient effect */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)); /* Gradient effect */
 }
 
 header nav {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Space between items */
-    padding: 1rem; /* Add padding to the nav */
+    padding: 1rem 2rem; /* Add padding to the nav */
+}
+
+header .company-name {
+    font-size: 2rem; /* Company name font size */
+    color: #ffffff; /* White text */
 }
 
 header nav ul {
@@ -33,27 +47,27 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none; /* Remove text decoration */
-    color: white; /* Set link color to white */
-    font-size: 1.8rem; /* Increase font size */
+    color: #ffffff; /* Set link color to white */
+    font-size: 1.2rem; /* Font size */
     padding: 0.5rem 1rem; /* Add padding to links */
     transition: background-color 0.3s; /* Smooth transition for background color */
 }
 
 header nav ul li a:hover {
-    background-color: #3c8af0; /* Background color on hover */
+    background-color: #555555; /* Background color on hover */
     border-radius: 5px; /* Rounded corners on hover */
 }
 
 .cart-icon {
-    color: white; /* Set icon color to white */
-    font-size: 2rem; /* Increase icon size */
+    color: #ffffff; /* Set icon color to white */
+    font-size: 1.5rem; /* Icon size */
+    margin-right: 2rem;
     padding: 0.5rem 1rem; /* Add padding to icon */
-    margin-right: 2rem; /* Move the icon a bit to the left */
     transition: background-color 0.3s; /* Smooth transition for background color */
 }
 
 .cart-icon:hover {
-    background-color: #3c8af0; /* Background color on hover */
+    background-color: #555555; /* Background color on hover */
     border-radius: 5px; /* Rounded corners on hover */
 }
 
@@ -64,38 +78,40 @@ header nav ul li a:hover {
     width: 100%;
 }
 
-#logo {
-    margin-right: 2rem;
-    width: 8rem;
-    height: auto;
-}
-
 .products {
-    display: flex;
-    justify-content: space-around;
-    margin: 2rem;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 1rem; /* Gap between items */
+    padding: 2rem;
 }
 
-.product {
-    background: white;
+.card {
+    background: linear-gradient(135deg, #734d91, #2c0037); /* Gradient background for the card */
     border: 1px solid #ddd;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
     margin: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1 0 30%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    overflow: hidden; /* Ensure content doesn't overflow */
 }
 
-.product img {
-    width: 100%;
-    height: auto;
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 248px;
+    height: 248px;
+    object-fit: cover; /* Ensure the image covers the box without stretching */
     margin-bottom: 1rem;
+    border-radius: 10px;
 }
 
 footer {
-    background: #3758a9; /* Background color for the footer */
-    color: white; /* Text color */
+    background: #000000; /* Black background for the footer */
+    color: #ffffff; /* White text */
     text-align: center; /* Center the text */
     padding: 1rem; /* Padding for the footer */
     margin-top: auto; /* Push the footer to the bottom */
@@ -113,7 +129,7 @@ footer .footer-links {
 }
 
 footer .footer-links a {
-    color: white; /* Link color */
+    color: #ffffff; /* Link color */
     text-decoration: none; /* Remove underline */
     margin: 0 1rem; /* Space between links */
     transition: color 0.3s; /* Smooth transition for color */
@@ -124,16 +140,17 @@ footer .footer-links a:hover {
 }
 
 button {
-    background: #3758a9;
-    color: white;
+    background: #000000; /* Black background for the button */
+    color: #ffffff; /* White text */
     border: none;
     padding: 0.5rem 1rem;
     cursor: pointer;
     transition: background 0.3s;
+    border-radius: 5px;
 }
 
 button:hover {
-    background: #003399;
+    background: #555555; /* Darker background on hover */
 }
 
 /* From Uiverse.io by gharsh11032000 */
@@ -152,12 +169,12 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
-    padding: 36px;
+    gap: 16px; /* Reduced gap */
+    padding: 24px; /* Reduced padding */
     border-radius: 22px;
     color: #ffffff;
     overflow: hidden;
-    background: #0a3cff;
+    background: #3893aa;
     transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -233,4 +250,18 @@ button:hover {
     top: 0;
     width: 100%;
     height: 100%;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 248px; /* Set a fixed height for the carousel */
+    overflow: hidden;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* Cover the container without stretching */
+    display: block;
 }
