@@ -1,29 +1,80 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+header {
+    background-color: #3758a9; /* Background color for the header */
+    padding: 0; /* Remove padding for the header */
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Stick to the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays on top */
 }
 
-header {
-    background: #333;
-    color: white;
-    padding: 1rem;
-    text-align: center;
+header.sticky {
+    background: linear-gradient(to bottom, rgba(55, 88, 169, 1), rgba(55, 88, 169, 0.8)); /* Gradient effect */
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between items */
+    padding: 1rem; /* Add padding to the nav */
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+header nav ul li {
+    margin: 0 1rem; /* Add some spacing between the list items */
+}
+
+header nav ul li a {
+    text-decoration: none; /* Remove text decoration */
+    color: white; /* Set link color to white */
+    font-size: 1.8rem; /* Increase font size */
+    padding: 0.5rem 1rem; /* Add padding to links */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+header nav ul li a:hover {
+    background-color: #3c8af0; /* Background color on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+.cart-icon {
+    color: white; /* Set icon color to white */
+    font-size: 2rem; /* Increase icon size */
+    padding: 0.5rem 1rem; /* Add padding to icon */
+    margin-right: 2rem; /* Move the icon a bit to the left */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.cart-icon:hover {
+    background-color: #3c8af0; /* Background color on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+.mask {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between items */
+    width: 100%;
 }
 
 #logo {
-    width: 150px;
+    margin-right: 2rem;
+    width: 8rem;
     height: auto;
 }
 
 .products {
     display: flex;
     justify-content: space-around;
-    margin: 1rem;
+    margin: 2rem;
+    flex-wrap: wrap;
 }
 
 .product {
@@ -31,17 +82,61 @@ header {
     border: 1px solid #ddd;
     padding: 1rem;
     text-align: center;
+    margin: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    flex: 1 0 30%;
+}
+
+.product:hover {
+    transform: translateY(-5px);
 }
 
 .product img {
     width: 100%;
     height: auto;
+    margin-bottom: 1rem;
 }
 
 footer {
-    background: #333;
+    background: #3758a9; /* Background color for the footer */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    padding: 1rem; /* Padding for the footer */
+    margin-top: auto; /* Push the footer to the bottom */
+    position: relative; /* Position relative for any absolute elements inside */
+    width: 100%; /* Full width */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 1rem; /* Font size */
+}
+
+footer .footer-links {
+    margin-top: 1rem; /* Space above the links */
+}
+
+footer .footer-links a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 1rem; /* Space between links */
+    transition: color 0.3s; /* Smooth transition for color */
+}
+
+footer .footer-links a:hover {
+    color: #ffcc00; /* Color on hover */
+}
+
+button {
+    background: #3758a9;
     color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: auto;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #003399;
 }
