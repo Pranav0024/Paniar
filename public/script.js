@@ -1,7 +1,7 @@
 let cart = [];
 const products = [
     { id: 1, name: 'Garden Sprayer Pressure Bottle' },
-    { id: 2, name: 'Product 2'},
+    { id: 2, name: 'Product 2' },
     { id: 3, name: 'Product 3' },
     // Add other products here as needed
 ];
@@ -10,6 +10,10 @@ function addToCart(productId) {
     cart.push(productId);
     alert('Product added to cart!');
     console.log(cart);
+
+    // Update cart counter
+    const cartCounter = document.querySelector('.cart-counter');
+    cartCounter.textContent = cart.length;
 }
 
 function viewCart() {
