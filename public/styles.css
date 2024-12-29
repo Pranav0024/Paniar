@@ -44,6 +44,7 @@ header nav {
 header .company-name {
     font-size: 2rem; /* Company name font size */
     color: #ffffff; /* White text */
+    font-family: 'Lustra Medium', sans-serif; /* Apply Lustra Medium font */
 }
 
 header nav ul {
@@ -90,6 +91,45 @@ header nav ul li a:hover {
     align-items: center;
     justify-content: space-between; /* Space between items */
     width: 100%;
+}
+
+.hero {
+    background: url('/assets/hero.png') no-repeat center center; /* Background image for hero section */
+    background-size: cover; /* Cover the entire hero section */
+    height: 400px; /* Set a fixed height for the hero section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.heading-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    color: #ffffff; /* White text */
+    padding: 1rem;
+    margin: 2rem 0; /* Space above and below the heading box */
+    text-align: center;
 }
 
 .products {
