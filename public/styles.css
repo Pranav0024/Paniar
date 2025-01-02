@@ -44,7 +44,8 @@ header nav {
 header .company-name {
     font-size: 2rem; /* Company name font size */
     color: #ffffff; /* White text */
-    font-family: 'Lustra Medium', sans-serif; /* Apply Lustra Medium font */
+    font-family: 'Orbitron', sans-serif; /* Apply Orbitron font */
+    font-weight: 700; /* Set font weight to 700 */
 }
 
 header nav ul {
@@ -103,6 +104,7 @@ header nav ul li a:hover {
     color: #ffffff; /* White text */
     text-align: center;
     padding: 2rem;
+    padding-right: 40rem;
 }
 
 .hero-content {
