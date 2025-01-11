@@ -56,8 +56,8 @@
             </div>
             <div class="card">
                 <div class="content">
-                    <div class="carousel">
-                        <img src="/assets/spray/image2.jpg" alt="Garden Sprayer Pressure Bottle" class="carousel-image">
+                    <div class="carousel" id="carousel-box1">
+                        <img src="/assets/box1/image1.jpg" alt="Product Image 1" class="carousel-image">
                     </div>
                     <h2>Garden Sprayer Pressure Bottle</h2>
                     <p>Paniar Smart 2 Litre Heavy-Duty Garden Pressure Sprayer Pump, Versatile Pesticide & Sanitization Spray, Portable Hand
@@ -124,6 +124,24 @@
         }
 
         setInterval(rotateImages, 3000); // Rotate images every 3 seconds
+
+        // Carousel functionality for the second card
+        const carouselBox1Images = [
+            '/assets/box1/image1.jpg',
+            '/assets/box1/image2.jpg',
+            '/assets/box1/image3.jpg',
+            // Add more image paths as needed
+        ];
+
+        let currentBox1ImageIndex = 0;
+        const carouselBox1Element = document.querySelector('#carousel-box1 .carousel-image');
+
+        function rotateBox1Images() {
+            currentBox1ImageIndex = (currentBox1ImageIndex + 1) % carouselBox1Images.length;
+            carouselBox1Element.src = carouselBox1Images[currentBox1ImageIndex];
+        }
+
+        setInterval(rotateBox1Images, 3000); // Rotate images every 3 seconds
     </script>
     <script src="script.js"></script>
 </body>
