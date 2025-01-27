@@ -3,8 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('/assets/background.png') no-repeat center center fixed; /* Background image */
-    background-size: cover; /* Cover the entire background */
+    background: #f0f0f0; /* Light grey background */
     color: #000000; /* Black text */
     position: relative;
 }
@@ -151,7 +150,7 @@ header nav ul li a:hover {
 }
 
 .card {
-    background: linear-gradient(135deg, #734d91, #2c0037); /* Gradient background for the card */
+    background: #ffffff; /* White background for the card */
     border: 1px solid #ddd;
     padding: 2rem;
     text-align: center;
@@ -172,6 +171,10 @@ header nav ul li a:hover {
     object-fit: cover; /* Ensure the image covers the box without stretching */
     margin-bottom: 1rem;
     border-radius: 10px;
+}
+
+.card h2, .card p {
+    color: #000000; /* Black text */
 }
 
 footer {
