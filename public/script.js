@@ -69,3 +69,385 @@ function rotateBox1Images() {
 }
 
 setInterval(rotateBox1Images, 3000); // Rotate images every 3 seconds
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('/assets/background.png') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Cover the entire background */
+    color: #000000; /* Black text */
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Inherit the background image */
+    filter: blur(1px); /* Apply blur effect */
+    z-index: -1; /* Place it behind the content */
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background for the header */
+    padding: 0; /* Remove padding for the header */
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Stick to the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+header.sticky {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)); /* Gradient effect */
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between items */
+    padding: 1rem 2rem; /* Add padding to the nav */
+}
+
+header .company-name {
+    font-size: 2rem; /* Company name font size */
+    color: #ffffff; /* White text */
+    font-family: 'Orbitron', sans-serif; /* Apply Orbitron font */
+    font-weight: 700; /* Set font weight to 700 */
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+header nav ul li {
+    margin: 0 1rem; /* Add some spacing between the list items */
+}
+
+header nav ul li a {
+    text-decoration: none; /* Remove text decoration */
+    color: #ffffff; /* Set link color to white */
+    font-size: 1.2rem; /* Font size */
+    padding: 0.5rem 1rem; /* Add padding to links */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+header nav ul li a:hover {
+    background-color: #555555; /* Background color on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+.cart-icon {
+    color: #ffffff; /* Set icon color to white */
+    font-size: 1.5rem; /* Icon size */
+    margin-right: 2rem;
+    padding: 0.5rem 1rem; /* Add padding to icon */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.cart-icon:hover {
+    background-color: #555555; /* Background color on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+.hamburger-menu {
+    display: none; /* Hide hamburger menu by default */
+    font-size: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.mask {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between items */
+    width: 100%;
+}
+
+.hero {
+    background: url('/assets/hero.png') no-repeat center center; /* Background image for hero section */
+    background-size: cover; /* Cover the entire hero section */
+    min-height: 400px; /* Set a minimum height for the hero section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 2rem;
+    padding-right: 40rem;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.heading-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    color: #ffffff; /* White text */
+    padding: 1rem;
+    margin-bottom: 2rem; /* Space above and below the heading box */
+    text-align: center;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 1rem; /* Gap between items */
+    padding: 2rem;
+}
+
+.card {
+    background: #ffffff; /* White background for the card */
+    border: 1px solid #ddd;
+    padding: 2rem;
+    text-align: center;
+    margin: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s;
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 248px;
+    height: 248px;
+    object-fit: cover; /* Ensure the image covers the box without stretching */
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.card h2, .card p {
+    color: #000000; /* Black text */
+}
+
+footer {
+    background: #000000; /* Black background for the footer */
+    color: #ffffff; /* White text */
+    text-align: center; /* Center the text */
+    padding: 1rem; /* Padding for the footer */
+    margin-top: auto; /* Push the footer to the bottom */
+    position: relative; /* Position relative for any absolute elements inside */
+    width: 100%; /* Full width */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 1rem; /* Font size */
+}
+
+footer .footer-links {
+    margin-top: 1rem; /* Space above the links */
+}
+
+footer .footer-links a {
+    color: #ffffff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    margin: 0 1rem; /* Space between links */
+    transition: color 0.3s; /* Smooth transition for color */
+}
+
+footer .footer-links a:hover {
+    color: #ffcc00; /* Color on hover */
+}
+
+button {
+    background: #000000; /* Black background for the button */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #555555; /* Darker background on hover */
+}
+
+/* From Uiverse.io by gharsh11032000 */
+.card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    border-radius: 24px;
+    line-height: 1.6;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px; /* Reduced gap */
+    padding: 24px; /* Reduced padding */
+    border-radius: 22px;
+    color: #ffffff;
+    overflow: hidden;
+    background: #3893aa;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content::before {
+    position: absolute;
+    content: "";
+    top: -4%;
+    left: 50%;
+    width: 90%;
+    height: 90%;
+    transform: translate(-50%);
+    background: #ced8ff;
+    z-index: -1;
+    transform-origin: bottom;
+    border-radius: inherit;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content::after {
+    position: absolute;
+    content: "";
+    top: -8%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%);
+    background: #e7ecff;
+    z-index: -2;
+    transform-origin: bottom;
+    border-radius: inherit;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content svg {
+    width: 48px;
+    height: 48px;
+}
+
+.content .para {
+    z-index: 1;
+    opacity: 1;
+    font-size: 18px;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content .link {
+    z-index: 1;
+    color: #fea000;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 16px;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content .link:hover {
+    text-decoration: underline;
+}
+
+.card:hover {
+    transform: translate(0px, -16px);
+}
+
+.card:hover .content::before {
+    rotate: -8deg;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card:hover .content::after {
+    rotate: 8deg;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 248px; /* Set a fixed height for the carousel */
+    overflow: hidden;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* Cover the container without stretching */
+    display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header nav ul {
+        display: none; /* Hide navigation links on mobile */
+    }
+
+    header nav ul.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        text-align: center;
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger menu on mobile */
+    }
+
+    .hero {
+        background: #ffffff; /* White background for hero section on mobile */
+        color: #000000; /* Black text */
+        padding-right: 2rem; /* adjust padding for mobile */
+        min-height: auto; /* Remove fixed height for mobile */
+    }
+
+    .hero-content {
+        padding-right: 2rem; /* Adjust padding for mobile */
+        width: 100%; /* Ensure content fits within the screen */
+        box-sizing: border-box; /* Include padding in the element's total width and height */
+    }
+
+    .products {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin: 1rem 0;
+    }
+}
