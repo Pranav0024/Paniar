@@ -4,91 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PANIAR E-Commerce</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Include FontAwesome for the cart icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Include Lustra Medium font -->
-    <link href="https://fonts.googleapis.com/css2?family=Lustra+Medium&display=swap" rel="stylesheet">
-    <!-- Include Orbitron font -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <title>E-Commerce Store</title>
+    <link rel="stylesheet" href="/Public/css/style.css">
 </head>
 
 <body>
-    <header>
-        <nav class="mask">
-            <div class="company-name"><a href="index.html" style="text-decoration: none;">Paniar</a></div>
-            <ul class="list">
-                <li><a href="#">Essential Tools</a></li>
-                <li><a href="#">Garden Care</a></li>
-                <li><a href="#">Vehicle Supplies</a></li>
-                <li><a href="shop.html">Shop</a></li>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <h1>My E-Commerce</h1>
+            <ul>
+                <li><a href="/Public/index.html">Home</a></li>
+                <li><a href="/Public/cart.html">Cart</a></li>
+                <li><a href="/Public/login.html">Login</a></li>
             </ul>
-            <a href="#" onclick="viewCart()" class="cart-icon">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-counter">0</span>
-            </a>
-            <div class="hamburger-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Discover Quality and Convenience</h1>
-                <p>At Paniar, we are committed to providing you with a wide selection of high-quality products that cater to your household, gardening, and car maintenance needs. Our mission is to simplify your shopping experience by offering reliable tools and supplies that enhance your living spaces and make everyday tasks easier. Whether you're looking for essential tools for home improvement, specialized gardening equipment, or car care items, Paniar is your trusted partner. Join us on this journey to elevate your lifestyle with products designed for quality and convenience.</p>
-            </div>
-        </section>
-        <section class="heading-box">
-            <h2>Top Three Products</h2>
-        </section>
-        <section class="products">
-            <div class="card">
-                <div class="content">
-                    <div class="carousel">
-                        <img src="/assets/spray/image1.jpg" alt="Garden Sprayer Pressure Bottle" class="carousel-image">
-                    </div>
-                    <h2>Garden Sprayer Pressure Bottle</h2>
-                    <p>Paniar Smart 2 Litre Heavy-Duty Garden Pressure Sprayer Pump, Versatile Pesticide & Sanitization Spray, Portable Hand Compression Plant Watering Can.</p>
-                    <button onclick="addToCart(1)">Add to Cart</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="content">
-                    <div class="carousel" id="carousel-box1">
-                        <img src="/assets/box1/image1.jpg" alt="Product Image 1" class="carousel-image">
-                    </div>
-                    <h2>Garden Sprayer Pressure Bottle</h2>
-                    <p>Paniar Smart 2 Litre Heavy-Duty Garden Pressure Sprayer Pump, Versatile Pesticide & Sanitization Spray, Portable Hand Compression Plant Watering Can.</p>
-                    <button onclick="addToCart(2)">Add to Cart</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="content">
-                    <div class="carousel">
-                        <img src="/assets/spray/image3.jpg" alt="Garden Sprayer Pressure Bottle" class="carousel-image">
-                    </div>
-                    <h2>Garden Sprayer Pressure Bottle</h2>
-                    <p>Paniar Smart 2 Litre Heavy-Duty Garden Pressure Sprayer Pump, Versatile Pesticide & Sanitization Spray, Portable Hand Compression Plant Watering Can.</p>
-                    <button onclick="addToCart(3)">Add to Cart</button>
-                </div>
-            </div>
-        </section>
-        <section id="cart" style="display:none;">
-            <h2>Your Cart</h2>
-            <ul id="cartItems"></ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 PANIAR E-Commerce. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Contact Us</a>
         </div>
-    </footer>
-    <script src="script.js"></script>
+    </nav>
+
+    <!-- Product Listings -->
+    <div class="container">
+        <h2>Featured Products</h2>
+        <div id="products" class="products-grid"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/Public/js/script.js"></script>
 </body>
 
 </html>
